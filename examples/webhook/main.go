@@ -26,7 +26,7 @@ func main() {
 }
 
 type WebhookData struct {
-	请键入    string          `json:"msg_type"`
+	Type    string          `json:"msg_type"`
 	Content json.RawMessage `json:"content"`
 }
 
