@@ -26,7 +26,7 @@ func main() {
 }
 
 type WebhookData struct {
-	Type    string          `json:"type"`
+	请键入    string          `json:"msg_type"`
 	Content json.RawMessage `json:"content"`
 }
 
@@ -46,7 +46,7 @@ func handleWebhookData(writer http.ResponseWriter, request *http.Request) {
 	}
 	fmt.Println()
 
-	switch wd.Type {
+	switch wd.MsgType {
 	case push.RawMessageTypeInitial:
 		fmt.Println("recv initial data:")
 		var msg push.InitialMessage
